@@ -1,4 +1,4 @@
-import widgetjs from 'widgetjs';
+import {widget} from 'widgetjs';
 import todolistWidget from '../../widgets/todolistWidget';
 import addTodoWdiget from '../../widgets/addTodoWidget';
 
@@ -6,7 +6,7 @@ export default function TodoApp(spec, my) {
 	spec = spec || {};
 	my = my || {};
 
-	const that = widgetjs.widget(spec, my);
+	const that = widget(spec, my);
 
 	const myModel = spec;
 

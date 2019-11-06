@@ -1,10 +1,10 @@
-import widgetjs from 'widgetjs';
+import {widget} from 'widgetjs';
 
  export default function addTodoWidget(spec, my) {
 	spec = spec || {};
 	my = my || {};
 	const addTodo = spec.addTodo || {};
-	const that = widgetjs.widget(spec, my);
+	const that = widget(spec, my);
 	let newTaskName = '';
 
 	const updateTaskName = element => {
