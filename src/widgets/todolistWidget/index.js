@@ -1,4 +1,4 @@
-import widgetjs from 'widgetjs';
+import {widget} from 'widgetjs';
 import todoItemWidget from './todoItemWidget';
 import styles from './style.less';
 export default function todolistWidget(spec, my) {
@@ -7,7 +7,7 @@ export default function todolistWidget(spec, my) {
 
 	const todos = spec.todos || [];
 	const completeTodo = spec.completeTodo;
-	const that = widgetjs.widget(spec, my);
+	const that = widget(spec, my);
 
 	that.renderContentOn = html => {
 		html.ul({klass:styles.todolist}, html => {

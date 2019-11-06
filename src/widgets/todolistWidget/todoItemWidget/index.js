@@ -1,4 +1,4 @@
-import widgetjs from 'widgetjs';
+import {widget} from 'widgetjs';
 import styles from '../style.less';
 
  export default function todoitemWidget(spec, my) {
@@ -6,7 +6,7 @@ import styles from '../style.less';
 	my = my || {};
 	const todoItem = spec.todoItem || {};
 	const onClick = spec.onClick || (() => {});
-	const that = widgetjs.widget(spec, my);
+	const that = widget(spec, my);
 
 	that.renderContentOn = html => {
 		html.li({klass: `${styles.todoitem} ${todoItem.getCompleted() ? styles.completed : ''}`}, todoItem.getText())
